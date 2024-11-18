@@ -1,0 +1,47 @@
+
+#header{
+    background-color: transparent;
+    width: 100%;
+    border: 2px solid rgb(234, 180, 180);
+    background-image: image-set('https://cdn.wallpapersafari.com/32/3/S1jatp.jpg');
+    background-size: cover;
+}
+
+#header p mat-icon{
+    color: white;
+    height: 50px;
+    width: 50px;
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+.heading{
+    font-weight: bold;
+    margin: auto;
+color: rgb(255, 255, 255);
+}
+
+
+@media (min-width : 220px) and (max-width : 550px) {
+    
+    #header{
+        font-size: medium; 
+    }
+    
+    #header p mat-icon{
+        color: white;
+        height: 30px;
+        width: 30px;
+        font-size: 30px;
+        position: relative;
+        right: 14px;
+    }
+
+    .heading{
+        position: relative;
+        right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
