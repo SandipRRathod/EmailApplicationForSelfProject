@@ -26,7 +26,7 @@ This project is born out of curiosity about how email systems work, especially G
 
 ## Features
 
-- **Sending Emails**: Implementing the SMTP protocol to send emails From My Email Adress With Username and Password.
+- **Sending Emails**: Implementing the SMTP protocol to send emails From My Email Adress With Username and Password likeGmail Compose mail Function.
 
 ## Technologies Used
 
