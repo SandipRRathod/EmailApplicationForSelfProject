@@ -1,0 +1,59 @@
+<div *ngIf="isLoading" class="loading-overlay">
+  <mat-spinner [diameter]="50"></mat-spinner> &nbsp;
+  <p>Sending your email...</p>
+</div>
+
+<div class="content">
+   <form (ngSubmit)="onFormSubmit()">
+
+    <div>
+      <p>From :</p>
+      <input type="text" style="font-weight: bold;" value="142521dip@gmail.com" readonly>
+   </div>
+      <div>
+         <p>To :</p>
+         <input type="text" name="to" [(ngModel)]="data.to" placeholder="Recipient..">
+      </div>
+
+      <div>
+         <p>Subject :</p><input type="text" name="subject" [(ngModel)]="data.subject" placeholder="Subject....">
+      </div>
+
+      <div>
+         <p>Massage :</p>
+         <textarea name="message" id="" rows="10" [(ngModel)]="data.message" placeholder="Write...."></textarea>
+         
+      </div>
+     
+
+        <div>
+        
+         <mat-icon class="rotate-up" (click)="openFileInput()">attachment</mat-icon>
+       
+         <input
+           type="file"
+           id="file"
+           style="display: none;"
+           (change)="onFilesSelected($event)"
+           multiple
+         />
+       
+
+         <div *ngIf="selectedFiles.length > 0">
+           <p style="color: whitesmoke;">Files Attached:</p>
+           <ul  style=" width: 100%;color: whitesmoke; overflow: hidden; font-size: 14px;">
+             <li *ngFor="let file of selectedFiles; let i = index">{{ file.name }}
+               &nbsp;&nbsp;&nbsp;<mat-icon (click)="removeFile(i)" style="position: relative;
+               top: 7px;">cancel</mat-icon>
+             </li>
+             
+           </ul>
+          
+         </div>
+       </div> 
+       
+      <button type="submit"><span>Send Email</span><mat-icon>send</mat-icon></button>
+   </form>
+</div>
+
+
